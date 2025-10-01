@@ -1,2 +1,3 @@
 # Tentazione_ComidaItaliana
 Projeto referente às matérias PTAS3 &amp; PTAC4. Desenvolvido por Ana Paula S. Schotten e Henrique João A. Trachta Filho, INFO 6B.
+> Obs.: Essa é a segunda versão do projeto, criada após a primeira versão apresentar erros incompreensíveis para os estudantes programadores. A primeira versão pode ser acessada atráves do link: <https://github.com/apsschotten/TentazioneComidaItaliana>.
