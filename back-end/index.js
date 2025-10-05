@@ -35,3 +35,5 @@ app.get('/adminUser', userController.verificarAuth, userController.verificarAdmi
 app.listen(PORT, () => {
     console.log(`Aplicação rodando na porta ${PORT}.`);
 });
+
+module.exports = app;
