@@ -4,7 +4,7 @@ const app = require('../index')
 test('Cadastro de Usuário', async () => {
   const res = await request(app)
     .post('/user/cadastrar')
-    .send({ nome: 'Feliciano Vargas', email: 'feli.vargas@tentazione.com', senha: 'ItaliaForever123' });
+    .send({ nome: 'Lovino Vargas', email: 'lovi.vargas@tentazione.com', senha: 'SenatusPopulusqueRomanus' });
   expect(res.body).toHaveProperty('userId');
 });
 
