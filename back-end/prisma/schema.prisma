@@ -19,4 +19,21 @@ model User{
   email String @unique
   senha String
   adminStatus Boolean @default(false)
+  post post[]
+}
+model post{
+
+id int id@default(autoincrement())
+title string
+conten string
+author user @relation(fields: [author_id], references: [id])
+author_id int 
+
+}
+
+model mesa{
+  id id@autoincrement
+  nome string
+  lugares int
+  
 }
