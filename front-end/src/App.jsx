@@ -1,14 +1,12 @@
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import './App.css';
+import './globals.css';
 
-function App() {
+export default function App() {
   return (
-    <>
+    <div>
       <Header />
       <Footer />
-    </>
+    </div>
   )
 }
-
-export default App
