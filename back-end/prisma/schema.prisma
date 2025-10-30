@@ -19,4 +19,24 @@ model User{
   email String @unique
   senha String
   adminStatus Boolean @default(false)
+  reservas Reservas[]
+}
+model mesa {
+  id int @id @default(autoincrement())
+  numero int
+  lugares int
+  reservas Reservas[]
+}
+
+model reserva {
+id Int @id @default(autoincrement())
+Userid int
+mesaid int
+date Date
+n_pessoas int
+mesaStatus Boolean @default(false)
+
+  user   User  @relation(fields: [userId], references: [id])
+  mesa  mesa @relation(fields: [mesaId], references: [id])
+
 }
