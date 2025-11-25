@@ -2,21 +2,22 @@ const { PrismaClient } = require('@prisma/client');
 const client = new PrismaClient();
 
 class mesaController {
-static async criar(req, res){
-     console.log(req.body);
-        const { nome, lugares} = req.body;
+    static async criar(req, res) {
+        console.log(req.body);
         
+        const { numero, capacidade } = req.body;
+
         const mesa = await client.mesa.create({
             data: {
-                nome,
-                lugares,
+                numero,
+                capacidade,
             },
         });
 
         res.json({
             mesaId: mesa.id,
         });
-    };
-};
+    }
+}
 
-module.export = mesaController;
+module.exports = mesaController;

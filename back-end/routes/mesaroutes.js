@@ -1,6 +1,6 @@
-const mesaController = require('../controllers/mesaControllers');
+const mesaController = require('../controllers/mesaController');
 const router = require('express').Router();
 
-router.post('/mesacadastrar', mesaController.cadastrar);
+router.post('/mesacadastrar', mesaController.criar)
 
 module.exports = router;

@@ -7,7 +7,7 @@ const client = new PrismaClient();
 
 class userController {
 
-    //Cadastrar Usuário
+    
     static async cadastrar(req, res) {
         console.log(req.body);
         const { nome, email, senha } = req.body;
@@ -15,7 +15,7 @@ class userController {
         const salt = bcryptjs.genSaltSync(8);
         const hashSenha = bcryptjs.hashSync(senha, salt);
 
-        const user = await client.user.create({
+        const usuario = await client.usuario.create({
             data: {
                 nome,
                 email,
@@ -24,27 +24,27 @@ class userController {
         });
 
         res.json({
-            userId: user.id,
+            usuarioId: usuario.id,
         });
     }
 
-    //Login
+ 
     static async login(req, res) {
         const { email, senha } = req.body;
 
-        const user = await client.user.findUnique({
+        const usuario = await client.usuario.findUnique({
             where: {
                 email: email,
             },
         });
 
-        if (!user) {
+        if (!usuario) {
             return res.json({
                 msg: "Usuário não encontrado.",
             });
         }
 
-        const senhaCorreta = bcryptjs.compareSync(senha, user.senha);
+        const senhaCorreta = bcryptjs.compareSync(senha, usuario.senha);
 
         if (!senhaCorreta) {
             return res.json({
@@ -53,7 +53,7 @@ class userController {
         }
 
         const token = jwt.sign(
-            { id: user.id },
+            { id: usuario.id },
             process.env.SENHA_SERVIDOR,
             { expiresIn: "1h" }
         );
@@ -64,7 +64,7 @@ class userController {
         });
     }
 
-    //Verificar Autenticação
+ 
     static async verificarAuth(req, res, next) {
         const authHeader = req.headers["authorization"];
 
@@ -78,7 +78,7 @@ class userController {
                     });
                 }
 
-                req.userId = payload.id;
+                req.usuarioId = payload.id;
                 next();
             });
 
@@ -89,21 +89,21 @@ class userController {
         }
     }
 
-    //Verificar Status de Administrador
+   
     static async verificarAdminStatus(req, res, next) {
-        if (!req.userId) {
+        if (!req.usuarioId) {
             return res.json({
                 msg: "Você não está autenticado.",
             });
         }
 
-        const user = await client.user.findUnique({
+        const usuario = await client.usuario.findUnique({
             where: {
-                id: req.userId,
+                id: req.usuarioId,
             },
         });
 
-        if (!user.adminStatus) {
+        if (!usuario.adminStatus) {
             return res.json({
                 msg: "Acesso negado. Usuário não possui privilégios de administrador.",
             });

@@ -1,5 +1,9 @@
 const userController = require('./controllers/userControllers');
 const userRoutes = require('./routes/userRoutes');
+const mesaController = require('./controllers/mesaController');
+const mesaRoutes = require('./routes/mesaroutes');
+const reservaController = require('./controllers/reservaController');
+const reservaRoutes = require('./routes/reservaRoutes')
 const express = require('express');
 
 const app = express();
@@ -21,7 +25,7 @@ app.use('/user', userRoutes);
 //Usuário Logado
 app.get('/loggedUser', userController.verificarAuth, (req, res) => {
     res.json({
-        msg: `Você está logado. Seu ID é ${req.userId} e ele lhe permite acessar este recurso.`,
+        msg: `Você está logado. Seu ID é ${req.usuarioId} e ele lhe permite acessar este recurso.`,
     });
 });
 
@@ -31,6 +35,13 @@ app.get('/adminUser', userController.verificarAuth, userController.verificarAdmi
         msg: "Você está logado e possui privilégios de administrador.",
     });
 });
+
+//rota da mesa
+app.use('/mesa', mesaRoutes);
+
+//rota das reserva
+app.use('/reserva', reservaRoutes);
+
 
 app.listen(PORT, () => {
     console.log(`Aplicação rodando na porta ${PORT}.`);
