@@ -2,8 +2,6 @@ const userController = require('./controllers/userControllers');
 const userRoutes = require('./routes/userRoutes');
 const mesaController = require('./controllers/mesaController');
 const mesaRoutes = require('./routes/mesaroutes');
-const reservaController = require('./controllers/reservaController');
-const reservaRoutes = require('./routes/reservaRoutes')
 const express = require('express');
 
 const app = express();
@@ -39,8 +37,7 @@ app.get('/adminUser', userController.verificarAuth, userController.verificarAdmi
 //rota da mesa
 app.use('/mesa', mesaRoutes);
 
-//rota das reserva
-app.use('/reserva', reservaRoutes);
+
 
 
 app.listen(PORT, () => {
