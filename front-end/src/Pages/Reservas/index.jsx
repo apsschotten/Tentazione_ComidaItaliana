@@ -1,8 +1,9 @@
-function Login() {
+function Reservas() {
     return (
         <div>
         </div>
     )
 }
 
-export default Login
+export default Reservas
+

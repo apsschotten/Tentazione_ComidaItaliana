@@ -1,8 +1,8 @@
-function Login() {
+function Menu() {
     return (
         <div>
         </div>
     )
 }
 
-export default Login
+export default Menu
