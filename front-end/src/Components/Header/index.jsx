@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 
+import Logo from '../Images/Logo.png';
+
 export default function Header() {
     return (
         <header>
+            <img src={Logo} className='Logo'/>
             <nav>
-                <Link to='/'>Home</Link>
-                <Link to='/menu'>Menu</Link>
-                <Link to='/login'>Login</Link>
-                <Link to='/cadastro'>Cadastro</Link>
+                <Link to='/' className='headerAtalhos'>Home</Link>
+                <Link to='/menu' className='headerAtalhos'>Menu</Link>
+                <Link to='/login' className='headerAtalhos'>Login</Link>
+                <Link to='/cadastro' className='headerAtalhos'>Cadastro</Link>
             </nav>
         </header>
     );

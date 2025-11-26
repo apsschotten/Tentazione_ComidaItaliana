@@ -1,0 +1,27 @@
+header {
+    background-color: #489b2d;
+}
+
+.Logo {
+    width: 450px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+}
+
+.headerAtalhos {
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.headerAtalhos:hover{
+    transition-duration: 0.5s;
+    color: #fff;
+    background-color: #205210;
+}
