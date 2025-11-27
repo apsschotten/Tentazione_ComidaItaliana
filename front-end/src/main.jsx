@@ -5,7 +5,7 @@ import './globals.css';
 
 import App from './App';
 import Home from './Pages/Home';
-import Menu from './Pages/Menu';
+import Cardapio from './Pages/Cardapio';
 import Login from './Pages/Login';
 import Cadastro from './Pages/Cadastro';
 import Reservas from './Pages/Reservas';
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<App />} path='/'>
           <Route element={<Home />} index />
-          <Route element={<Menu />} path='menu' />
+          <Route element={<Cardapio />} path='cardapio' />
           <Route element={<Login />} path='login' />
           <Route element={<Cadastro />} path='cadastro' />
           <Route element={<Reservas />} path='reservas' />
