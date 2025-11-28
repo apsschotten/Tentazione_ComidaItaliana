@@ -1,15 +1,37 @@
+body {
+    background: repeating-linear-gradient(90deg,
+            #76dd53,
+            #76dd53 1%,
+            #5dbd3d 1%,
+            #5dbd3d 2%);
+}
+
+.container {
+    width: 75%;
+    background-color: aliceblue;
+    border-radius: 25px;
+    margin: auto;
+    display: block;
+    margin-top: 2%;
+}
+
 header {
     background-color: #489b2d;
+    width: 100%;
+    border-radius: 22px 22px 0px 0px;
 }
 
 .Logo {
-    width: 450px;
+    width: 35%;
+    margin: auto;
+    display: block;
+    padding: 2%;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    column-gap: 100px;
+    background-color: #3e8f24;
 }
 
 .headerAtalhos {
@@ -18,9 +40,12 @@ nav {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    width: 25%;
+    text-align: center;
+    padding: 0.5%;
 }
 
-.headerAtalhos:hover{
+.headerAtalhos:hover {
     transition-duration: 0.5s;
     color: #fff;
     background-color: #205210;
