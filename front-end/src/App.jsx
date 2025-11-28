@@ -1,11 +1,19 @@
 import Header from './Components/Header';
+import { Outlet } from 'react-router-dom';
 import Footer from './Components/Footer';
+
+import { Link } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div>
+    <div className='container'>
       <Header />
+
+      <main>
+        <Outlet />
+      </main>
+
       <Footer />
     </div>
-  )
+  );
 }

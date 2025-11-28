@@ -1,0 +1,186 @@
+body {
+    background: repeating-linear-gradient(90deg,
+            #76dd53,
+            #76dd53 1%,
+            #5dbd3d 1%,
+            #5dbd3d 2%);
+}
+
+.container {
+    width: 75%;
+    background-color: aliceblue;
+    border-radius: 25px;
+    margin: auto;
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+header {
+    background-color: #489b2d;
+    width: 100%;
+    border-radius: 22px 22px 0px 0px;
+}
+
+.Logo {
+    width: 35%;
+    margin: auto;
+    display: block;
+    padding: 2%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #3e8f24;
+}
+
+.headerAtalhos {
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+    padding: 0.5%;
+}
+
+.headerAtalhos:hover {
+    transition-duration: 0.5s;
+    color: #fff;
+    background-color: #205210;
+}
+
+footer {
+    background-color: #3e8f24;
+    width: 100%;
+    border-radius: 0px 0px 22px 22px;
+}
+
+.footerText {
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 0.5%;
+    font-weight: bold;
+}
+
+.pageTitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 0.5%;
+}
+
+.cardContainer {
+    width: 100%;
+}
+
+.card {
+    width: 85%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5%;
+}
+
+.cardImage {
+    width: 17%;
+    height: 17%;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cardTitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.cardPrice {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: -0.5%;
+    margin-bottom: -0.5%;
+}
+
+.cardDescription {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.homeBanner {
+    width: 100%;
+    margin-bottom: 0;
+    box-shadow: 0 0 8px 8px white inset;
+
+}
+
+.buttonsContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.homeButton {
+    width: 20%;
+}
+
+.homeButton:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+input{
+    padding: 2%;
+    border-radius: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border: 0;
+    width: 100%
+}
+
+.inputButton {
+    background-color: #3e8f24;
+    border-radius: 15px;
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    width: 104%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.inputButton:hover {
+    transition-duration: 0.5s;
+    color: #fff;
+    background-color: #205210;
+    cursor: pointer;
+}

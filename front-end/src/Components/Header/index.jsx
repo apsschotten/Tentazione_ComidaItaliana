@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 
-function Header() {
+import Logo from '../Components_Images/Logo.png';
+
+export default function Header() {
     return (
         <header>
-            <img src='https://drive.google.com/file/d/1MqbnNxwiv28grxfP76rLXUkiJ4Ebab9l/view' alt='Logo' />
+            <img src={Logo} className='Logo' />
             <nav>
-                <Link to='/'>Página Inicial</Link>
-                <Link to='/login'>Login</Link>
+                <Link to='/' className='headerAtalhos'>Home</Link>
+                <Link to='/cardapio' className='headerAtalhos'>Cardápio</Link>
+                <Link to='/login' className='headerAtalhos'>Login</Link>
+                <Link to='/cadastro' className='headerAtalhos'>Cadastro</Link>
             </nav>
         </header>
-    )
+    );
 }
-
-export default Header
