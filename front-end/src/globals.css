@@ -119,3 +119,41 @@ footer {
     font-weight: lighter;
     text-align: justify;
 }
+
+.homeBanner {
+    width: 100%;
+    margin-bottom: 0;
+    box-shadow: 0 0 8px 8px white inset;
+}
+
+.reservasContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.reservasButton {
+    width: 25%;
+    background-color: #3e8f24;
+    padding: 2%;
+    border-radius: 15px;
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    margin: 1.5%;
+}
+
+.reservasButton:hover {
+    transition-duration: 0.5s;
+    color: #fff;
+    background-color: #205210;
+    cursor: pointer;
+}
+
+.minhasReservasButton{
+    width: 20%;
+    float: left;
+}
