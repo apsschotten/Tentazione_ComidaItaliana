@@ -13,6 +13,7 @@ body {
     margin: auto;
     display: block;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 header {
@@ -49,4 +50,19 @@ nav {
     transition-duration: 0.5s;
     color: #fff;
     background-color: #205210;
+}
+
+footer {
+    background-color: #3e8f24;
+    width: 100%;
+    border-radius: 0px 0px 22px 22px;
+}
+
+.footerText {
+    color: #205210;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 0.5%;
+    font-weight: bold;
 }

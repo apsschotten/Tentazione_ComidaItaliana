@@ -1,16 +1,32 @@
 import React from 'react';
 
 export default function Login() {
+    function handleSubmit() {
+        alert('Login realizado com sucesso!')
+    }
+
     return (
         <div>
             <h1>Login</h1>
-            <label>
-                E-mail: <input name="email" placeholder='E-mail' />
-            </label>
-            <label>
-                Senha: <input name="senha" placeholder='Senha'/>
-            </label>
-            
+            <form onSubmit={handleSubmit}>
+                <label>
+                    E-mail:
+                    <input
+                        name='email'
+                        type='email'
+                        placeholder='E-mail'
+                        required />
+                </label>
+                <label>
+                    Senha:
+                    <input
+                        name='senha'
+                        type='password'
+                        placeholder='Senha'
+                        required />
+                </label>
+                <input type="submit" value="Acessar" />
+            </form>
         </div>
     );
 }

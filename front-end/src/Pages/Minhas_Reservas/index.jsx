@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Minhas_Reservas() {
     function handleSubmit() {
-        alert('Reserva encontrada!')
+        alert('Reserva confirmada!')
     }
 
     return (
@@ -10,44 +10,29 @@ export default function Minhas_Reservas() {
             <h1>Minhas Reservas</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Data de Reserva:
+                    Número da Mesa:
+                    <input
+                        name='numeroMesa'
+                        type='number'
+                        placeholder='Número da Mesa'
+                        required />
+                </label>
+                <label>
+                    Número da Reserva:
+                    <input
+                        name='numeroReserva'
+                        type='number'
+                        placeholder='Número da Reserva'
+                        required />
+                </label>
+                <label>
+                    Data da Reserva:
                     <input
                         name='data'
                         type='date'
                         required />
                 </label>
-                <label>
-                    Horário:
-                    <input
-                        name='horario'
-                        type='time'
-                        required />
-                </label>
-                <label>
-                    Nome do Cliente:
-                    <input
-                        name='nome'
-                        type='text'
-                        placeholder='Nome Completo'
-                        required />
-                </label>
-                <label>
-                    Contato:
-                    <input
-                        name='contato'
-                        type='text'
-                        placeholder='Contato'
-                        required />
-                </label>
-                <label>
-                    Quantidade de Pessoas:
-                    <input
-                        name='numero'
-                        type='number'
-                        placeholder='Quantidade de Pessoas'
-                        required />
-                </label>
-                <input type="submit" value="Reservar" />
+                <input type="submit" value="Consultar" />
             </form>
         </div>
     );

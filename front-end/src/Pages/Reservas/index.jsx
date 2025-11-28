@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Reservas() {
     function handleSubmit() {
-        alert('Reserva realizada com sucesso!')
+        alert('Reserva encontrada!')
     }
 
     return (
