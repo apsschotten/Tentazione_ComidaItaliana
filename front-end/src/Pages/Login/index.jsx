@@ -7,7 +7,7 @@ export default function Login() {
 
     return (
         <div>
-            <h1>Login</h1>
+            <h1 className='pageTitle'>Login</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     E-mail:

@@ -7,7 +7,7 @@ export default function Minhas_Reservas() {
 
     return (
         <div>
-            <h1>Minhas Reservas</h1>
+            <h1 className='pageTitle'>Minhas Reservas</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Número da Mesa:

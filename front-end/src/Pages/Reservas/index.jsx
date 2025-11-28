@@ -7,7 +7,7 @@ export default function Reservas() {
 
     return (
         <div>
-            <h1>Reservas</h1>
+            <h1 className='pageTitle'>Reservas</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Data de Reserva:
