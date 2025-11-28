@@ -47,7 +47,7 @@ export default function Reservas() {
                         placeholder='Quantidade de Pessoas'
                         required />
                 </label>
-                <input type="submit" value="Reservar" />
+                <input type="submit" value="Reservar" className='inputButton' />
             </form>
         </div>
     );

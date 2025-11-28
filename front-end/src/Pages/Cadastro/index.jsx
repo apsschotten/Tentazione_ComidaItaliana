@@ -73,7 +73,7 @@ export default function Cadastro() {
                         placeholder='Estado'
                         required />
                 </label>
-                <input type="submit" value="Cadastrar" />
+                <input type="submit" value="Cadastrar" className='inputButton'/>
             </form>
         </div>
     );

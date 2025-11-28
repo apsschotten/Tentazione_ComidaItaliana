@@ -25,7 +25,7 @@ export default function Login() {
                         placeholder='Senha'
                         required />
                 </label>
-                <input type="submit" value="Acessar" />
+                <input type="submit" value="Acessar" className='inputButton' />
             </form>
         </div>
     );

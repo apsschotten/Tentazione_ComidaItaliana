@@ -32,7 +32,7 @@ export default function Minhas_Reservas() {
                         type='date'
                         required />
                 </label>
-                <input type="submit" value="Consultar" />
+                <input type="submit" value="Consultar" className='inputButton'/>
             </form>
         </div>
     );
